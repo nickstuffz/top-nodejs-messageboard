@@ -15,6 +15,7 @@ const messages = [
 
 function messagesGet(req, res) {
   res.render("index", { title: "Messageboard", messages: messages });
+  console.log(messages);
 }
 
 function messagesCreateGet(req, res) {
