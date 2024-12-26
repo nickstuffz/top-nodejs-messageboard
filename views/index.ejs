@@ -6,7 +6,11 @@
     <a href="/new">new message</a>
     <ul>
       <% messages.forEach((message) => { %>
-      <li><%= message.text %> <%= message.user %> <%= message.added %></li>
+      <li>
+        <h3><%= message.username %></h3>
+        <p><%= message.text %></p>
+        <i><%= message.edit_timestamp %></i>
+      </li>
       <% }) %>
     </ul>
   </body>

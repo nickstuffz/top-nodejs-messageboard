@@ -10,7 +10,7 @@ DROP TABLE messages;
 CREATE TABLE messages (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   username VARCHAR ( 255 ),
-  recentedit timestamp DEFAULT CURRENT_TIMESTAMP,
+  edit_timestamp timestamp DEFAULT CURRENT_TIMESTAMP,
   text TEXT
 );
 
