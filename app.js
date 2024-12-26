@@ -11,7 +11,8 @@ const indexRouter = require("./routes/indexRouter");
 
 app.use("/", indexRouter);
 
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`MessageBoard - listening on port ${PORT}!`);
+const port = process.env.PORT || 8080;
+
+app.listen(port, "::", () => {
+  console.log(`Server listening on [::]${port}`);
 });
