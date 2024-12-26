@@ -5,18 +5,20 @@ require("dotenv").config();
 const { Client } = require("pg");
 
 const SQL = `
-CREATE TABLE IF NOT EXISTS messages (
+DROP TABLE messages;
+
+CREATE TABLE messages (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   username VARCHAR ( 255 ),
-  date VARCHAR ( 255 ),
+  recentedit timestamp DEFAULT CURRENT_TIMESTAMP,
   text TEXT
 );
 
-INSERT INTO messages (username, date, text) 
+INSERT INTO messages (username, text) 
 VALUES
-  ('Bryan', 'testdate', 'im bryan'),
-  ('Odin', 'testdate', 'im odin'),
-  ('Damon', 'testdate', 'im damon');
+  ('Nick Ng', 'I like to nap.'),
+  ('Toffle', 'Is that a mouse I smell?'),
+  ('Chloe Blazey', 'The Gooby Kingdom is my domain.');
 `;
 
 async function main() {
