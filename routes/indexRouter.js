@@ -6,4 +6,4 @@ indexRouter.get("/", indexController.messagesGet);
 indexRouter.get("/new", indexController.messagesCreateGet);
 indexRouter.post("/new", indexController.messagesCreatePost);
 
-module.exports = { indexRouter };
+module.exports = indexRouter;
