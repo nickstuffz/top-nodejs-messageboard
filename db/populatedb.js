@@ -5,7 +5,7 @@ require("dotenv").config();
 const { Client } = require("pg");
 
 const SQL = `
-DROP TABLE messages;
+DROP TABLE IF EXISTS messages;
 
 CREATE TABLE messages (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
@@ -33,17 +33,3 @@ async function main() {
 }
 
 main();
-
-// what should my table look like?
-
-// let messages = [
-//     {
-//       text: 'Hi there!',
-//       user: 'Amando',
-//       added: 2024-12-25T09:32:12.461Z
-//     },
-//     {
-//       text: 'Hello World!',
-//       user: 'Charles',
-//       added: 2024-12-25T09:32:12.461Z
-//     }]
